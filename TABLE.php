@@ -2,7 +2,7 @@
     require 'conexao.php';
 
     $lista = [];
-    $sql = $pdo->query('SELECT*FROM usuario');
+    $sql = $pdo->query('SELECT*FROM tbmercado');
     $lista = [];
     if($sql->rowCount()>0){
         $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
