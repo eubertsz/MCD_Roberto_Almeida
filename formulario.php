@@ -20,16 +20,17 @@
             <input type="text" name="qntd"><br><br>
             <label for="preco">Insira o Preço</label>
             <input type="text" name="preco"><br><br>
-            <button type="submit">Cadastrar</button>
+            <button type="submit">CADASTRAR</button>
         </form><br>
 
     </main>
 <?php
+require 'conexao.php';
 $produto = $_POST['produto'] ?? null;
 $qntd = $_POST['qtnd'] ?? null;
 $preco = $_POST['preco'] ?? null;
 
-if(isset($_POST['ENVIAR'])){
+if(isset($_POST['CADASTRAR'])){
     $produto = $_POST['produto'] ?? null;
     $qntd = $_POST['qntd'] ?? null;
     $preco = $_POST['preco'] ?? null;

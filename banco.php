@@ -13,21 +13,18 @@ try {
     $sql->execute();
 }
 catch (PDOException $e) {
-    // Capturando erros específicos
+    
     switch ($e->getCode()) {
-        case 23000: // Duplicidade de entrada
+        case 23000: 
             echo "Esse e-mail já está cadastrado.";
             break;
-        case 42000: // Erro de sintaxe SQL
+        case 42000: 
             echo "Erro no banco de dados. Por favor, tente novamente mais tarde.";
-            break; // Erro de conexão
-            //case 08004:
-            //echo "Não foi possível conectar ao banco de dados. Por favor, verifique a conexão.";
-            //break;
-        case 22007: // Formato de dados inválido
+            break; 
+        case 22007: 
             echo "Formato de dados inválido. Por favor, verifique os campos e tente novamente.";
             break;
-        default: // Mensagem genérica para outros erros
+        default: 
             echo "Erro ao cadastrar: " . $e->getMessage();
     }
 }
