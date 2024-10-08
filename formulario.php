@@ -17,9 +17,9 @@
             <label for="produto">Insira o Produto</label>
             <input type="text" name="produto"><br><br>
             <label for="qntd">Insira a quantidade</label>
-            <input type="number" name="qntd"><br><br>
+            <input type="text" name="qntd"><br><br>
             <label for="preco">Insira o Preço</label>
-            <input type="number" name="preco"><br><br>
+            <input type="text" name="preco"><br><br>
             <button type="submit">Cadastrar</button>
         </form><br>
 
