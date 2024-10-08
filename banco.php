@@ -10,7 +10,7 @@ try {
     $sql->bindValue(':produto', $produto);
     $sql->bindValue(':qntd', $qntd);
     $sql->bindValue(':preco', $preco);
-    $sql->execute;
+    $sql->execute();
 }
 catch (PDOException $e) {
     // Capturando erros específicos
