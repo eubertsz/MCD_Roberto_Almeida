@@ -1,11 +1,11 @@
 <?php
 require 'conexao.php';
 
-$prod = $_POST['produto'] ?? null;
+$produto = $_POST['produto'] ?? null;
 $qntd = $_POST['qntd'] ?? null;
 $preco = $_POST['preco'] ?? null;
 
-try ($prod && $qntd && $preco) {
+try {
     $sql = $pdo->prepare("INSERT INTO tbmercado (produto, qntd, preco) VALUES (:produto, :qtnd, :preco)");
     $sql->bindValue(':produto', $produto);
     $sql->bindValue(':qntd', $qntd);
