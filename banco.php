@@ -6,11 +6,12 @@ $qntd = $_POST['qntd'] ?? null;
 $preco = $_POST['preco'] ?? null;
 
 try {
-    $sql = $pdo->prepare("INSERT INTO tbmercado (produto, qntd, preco) VALUES (:produto, :qtnd, :preco)");
+    $sql = $pdo->prepare("INSERT INTO tbmercado (produto, qntd, preco) VALUES (:produto, :qntd, :preco)");
     $sql->bindValue(':produto', $produto);
     $sql->bindValue(':qntd', $qntd);
     $sql->bindValue(':preco', $preco);
     $sql->execute();
+    header("Location: TABLE.php");
 }
 catch (PDOException $e) {
     
