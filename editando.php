@@ -5,13 +5,13 @@ $produto = $_POST['produto'];
 $qntd = $_POST['qntd'] ;
 $preco = $_POST['preco'];
 
-
-$sql = $pdo->prepare("UPDATE tbmercado SET produto = :produto, qntd = :qntd preco = :preco, where id_prod = $id_prod");
+$sql = $pdo->prepare("UPDATE tbmercado SET produto = :produto, qntd = :qntd, preco = :preco WHERE id_prod = :id_prod");
 $sql->bindvalue(':produto', $produto);
 $sql->bindvalue(':qntd', $qntd);
 $sql->bindvalue(':preco', $preco);
+$sql->bindvalue(':id_prod', $id_prod);
 
 $sql->execute();
 
-header("Location: formulario.php");
+header("Location: TABLE.php");
 ?>
